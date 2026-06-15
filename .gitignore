@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+build/
+android/app/build/
+
+# logs
+*.log
+
+# Android / Gradle
+.gradle/
+.gradle-local/
+.gradle-user-home/
+
+# IDE
+.vscode/
+.idea/
+
+# APK file (do not upload compiled app)
+*.apk
+StudyBuddy-debug.apk

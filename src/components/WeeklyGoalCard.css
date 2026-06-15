@@ -1,0 +1,256 @@
+/**
+ * WeeklyGoalCard Styles
+ * Modern card-style UI with progress bar
+ */
+
+.goal-card {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(56, 239, 125, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 239, 125, 0.4);
+}
+
+.goal-card.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+}
+
+.goal-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.goal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.goal-icon {
+  font-size: 24px;
+}
+
+.goal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.edit-goal-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.edit-goal-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.goal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.goal-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.goal-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.goal-stat .stat-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.goal-stat .stat-label {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.goal-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+.progress-percentage {
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 45px;
+  text-align: right;
+}
+
+.goal-footer {
+  text-align: center;
+}
+
+.goal-footer .remaining {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+}
+
+.goal-footer .motivation {
+  font-size: 13px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Edit Form Styles */
+.goal-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.goal-edit-form label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.goal-input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.goal-input-group input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.goal-input-group input:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.input-suffix {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.save-btn, .cancel-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.save-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #16a34a;
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.save-btn:active, .cancel-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .goal-card {
+    padding: 16px;
+  }
+
+  .goal-stats {
+    padding: 10px;
+  }
+
+  .goal-stat .stat-value {
+    font-size: 20px;
+  }
+
+  .progress-bar {
+    height: 10px;
+  }
+
+  .progress-percentage {
+    font-size: 14px;
+  }
+}
+

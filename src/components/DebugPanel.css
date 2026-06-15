@@ -1,0 +1,294 @@
+/* ============================================================================
+   Debug Panel Styles
+   ============================================================================ */
+
+.debug-panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  max-height: 80vh;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  overflow: hidden;
+  border: 2px solid #4a4a6a;
+}
+
+/* Header */
+.debug-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #16213e;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #4a4a6a;
+}
+
+.debug-panel-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffd700;
+}
+
+.debug-panel-toggle {
+  font-size: 10px;
+  color: #888;
+}
+
+/* Content */
+.debug-panel-content {
+  padding: 10px;
+  max-height: calc(80vh - 50px);
+  overflow-y: auto;
+}
+
+/* Sections */
+.debug-section {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.debug-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.debug-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.debug-section-title {
+  font-weight: bold;
+  color: #00d9ff;
+  margin-bottom: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Badges */
+.debug-info {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.badge-capacitor {
+  background: #4caf50;
+  color: #fff;
+}
+
+.badge-pwa {
+  background: #2196f3;
+  color: #fff;
+}
+
+.badge-web {
+  background: #9e9e9e;
+  color: #fff;
+}
+
+.badge-js {
+  background: #ff9800;
+  color: #fff;
+}
+
+/* Error Summary */
+.debug-error-summary {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.debug-error-summary .badge {
+  font-size: 9px;
+  padding: 2px 6px;
+}
+
+.error-firestore {
+  background: #e91e63;
+}
+
+.error-auth {
+  background: #9c27b0;
+}
+
+.error-network {
+  background: #f44336;
+}
+
+.error-generic {
+  background: #607d8b;
+}
+
+/* Error List */
+.debug-error-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.debug-no-errors {
+  color: #4caf50;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.debug-error-item {
+  background: #0d0d1a;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-left: 3px solid;
+}
+
+.debug-error-item:last-child {
+  margin-bottom: 0;
+}
+
+.debug-error-item.error-firestore {
+  border-left-color: #e91e63;
+}
+
+.debug-error-item.error-auth {
+  border-left-color: #9c27b0;
+}
+
+.debug-error-item.error-network {
+  border-left-color: #f44336;
+}
+
+.debug-error-item.error-generic {
+  border-left-color: #607d8b;
+}
+
+.debug-error-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.debug-error-type {
+  font-weight: bold;
+  color: #ff6b6b;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.debug-error-time {
+  color: #666;
+  font-size: 10px;
+}
+
+.debug-error-message {
+  color: #ccc;
+  word-break: break-word;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.debug-error-context {
+  margin-top: 4px;
+  padding: 4px;
+  background: #1a1a2e;
+  border-radius: 3px;
+  color: #888;
+  font-size: 10px;
+  overflow-x: auto;
+}
+
+/* Buttons */
+.debug-btn {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.debug-btn:hover {
+  opacity: 0.8;
+}
+
+.debug-btn-clear {
+  background: #f44336;
+  color: #fff;
+}
+
+/* Instructions */
+.debug-instructions {
+  background: #0d0d1a;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.debug-instructions ul {
+  margin: 0;
+  padding-left: 16px;
+  color: #888;
+}
+
+.debug-instructions li {
+  margin-bottom: 4px;
+  font-size: 10px;
+}
+
+/* Scrollbar */
+.debug-panel-content::-webkit-scrollbar,
+.debug-error-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.debug-panel-content::-webkit-scrollbar-track,
+.debug-error-list::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+.debug-panel-content::-webkit-scrollbar-thumb,
+.debug-error-list::-webkit-scrollbar-thumb {
+  background: #4a4a6a;
+  border-radius: 3px;
+}
+
+.debug-panel-content::-webkit-scrollbar-thumb:hover,
+.debug-error-list::-webkit-scrollbar-thumb:hover {
+  background: #5a5a7a;
+}
+
+/* Dark mode adjustments */
+.dark-mode .debug-panel {
+  background: #1a1a2e;
+  border-color: #5a5a7a;
+}
+
+.dark-mode .debug-panel-header {
+  background: #0d0d1a;
+}
+
+.dark-mode .debug-error-item {
+  background: #0a0a14;
+}
+

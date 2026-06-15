@@ -1,0 +1,87 @@
+.chart-container {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.chart-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.custom-tooltip {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-label {
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.tooltip-value {
+  margin: 0;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* Empty Chart State */
+.chart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #64748b;
+  text-align: center;
+}
+
+.chart-empty p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.chart-empty-subtitle {
+  margin-top: 0.5rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  color: #94a3b8;
+}
+
+/* Dark Mode */
+body.dark-mode .chart-container {
+  background: #334155;
+}
+
+body.dark-mode .chart-title {
+  color: #f1f5f9;
+}
+
+body.dark-mode .custom-tooltip {
+  background: #334155;
+  border-color: #475569;
+}
+
+body.dark-mode .tooltip-label {
+  color: #f1f5f9;
+}
+
+body.dark-mode .tooltip-value {
+  color: #60a5fa;
+}
+
+body.dark-mode .chart-empty {
+  color: #94a3b8;
+}
+
+body.dark-mode .chart-empty-subtitle {
+  color: #64748b;
+}

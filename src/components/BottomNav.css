@@ -1,0 +1,77 @@
+/* Bottom Navigation - Mobile First */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  /* Safe area padding for home indicator */
+  padding-bottom: 0.5rem;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 20px));
+  z-index: 1000;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #64748b;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.bottom-nav-item:active {
+  transform: scale(0.95);
+}
+
+.bottom-nav-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.bottom-nav-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.bottom-nav-item.active {
+  color: #1e3a8a;
+  background: #eff6ff;
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  transform: scale(1.1);
+}
+
+/* Dark Mode */
+body.dark-mode .bottom-nav {
+  background: #1e293b;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .bottom-nav-item {
+  color: #94a3b8;
+}
+
+body.dark-mode .bottom-nav-item.active {
+  color: #3b82f6;
+  background: #1e3a8a;
+}
+
+/* Show only on mobile (tablet and phone) */
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

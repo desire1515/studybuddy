@@ -1,0 +1,260 @@
+/* TimetableCard - Mobile First */
+.timetable-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.timetable-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+}
+
+.day-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.session-count {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.sessions-list {
+  padding: 0.5rem;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  animation: slideIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
+
+.session-item:hover {
+  background: #f8fafc;
+}
+
+.session-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+  padding: 0.5rem;
+  background: #eff6ff;
+  border-radius: 6px;
+}
+
+.time-start {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.time-separator {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.time-end {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.session-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.session-subject {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reminder-badge {
+  font-size: 0.8rem;
+}
+
+.session-room {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.edit-session-btn,
+.delete-session-btn {
+  padding: 0.5rem;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.session-item:hover .edit-session-btn,
+.session-item:hover .delete-session-btn {
+  opacity: 1;
+}
+
+.edit-session-btn:hover {
+  background: #dbeafe;
+}
+
+.delete-session-btn:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.no-sessions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.no-sessions-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-sessions p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Dark Mode */
+body.dark-mode .timetable-card {
+  background: #334155;
+}
+
+body.dark-mode .session-item:hover {
+  background: #475569;
+}
+
+body.dark-mode .session-time {
+  background: #1e3a8a;
+}
+
+body.dark-mode .time-start {
+  color: #60a5fa;
+}
+
+body.dark-mode .time-end,
+body.dark-mode .time-separator {
+  color: #94a3b8;
+}
+
+body.dark-mode .session-subject {
+  color: #f1f5f9;
+}
+
+body.dark-mode .session-room {
+  color: #94a3b8;
+}
+
+body.dark-mode .edit-session-btn,
+body.dark-mode .delete-session-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+body.dark-mode .edit-session-btn:hover {
+  background: #334155;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .timetable-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .timetable-card-header {
+    padding: 1.25rem;
+  }
+  
+  .day-name {
+    font-size: 1.25rem;
+  }
+  
+  .session-count {
+    font-size: 0.9rem;
+  }
+  
+  .sessions-list {
+    padding: 0.75rem;
+  }
+  
+  .session-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .session-time {
+    min-width: 90px;
+    padding: 0.75rem;
+  }
+  
+  .time-start {
+    font-size: 1rem;
+  }
+  
+  .session-subject {
+    font-size: 1rem;
+  }
+  
+  .session-room {
+    font-size: 0.9rem;
+  }
+  
+  .edit-session-btn,
+  .delete-session-btn {
+    opacity: 0;
+  }
+  
+  .session-item:hover .edit-session-btn,
+  .session-item:hover .delete-session-btn {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,202 @@
+/* ReminderManager - Mobile First */
+.reminder-manager {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+.reminder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.reminder-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.enable-notifications-btn {
+  padding: 0.5rem 0.875rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enable-notifications-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.notification-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem;
+  background: #f0fdf4;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #166534;
+}
+
+.status-icon {
+  font-weight: bold;
+}
+
+.upcoming-sessions h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.session-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+}
+
+.session-preview.today {
+  background: #eff6ff;
+  border-left-color: #22c55e;
+}
+
+.session-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-day {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.session-time {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.session-subject {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e3a8a;
+}
+
+.no-sessions-msg {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Dark Mode */
+body.dark-mode .reminder-manager {
+  background: #334155;
+}
+
+body.dark-mode .reminder-header h3 {
+  color: #f1f5f9;
+}
+
+body.dark-mode .enable-notifications-btn {
+  background: #3b82f6;
+}
+
+body.dark-mode .notification-status {
+  background: #14532d;
+  color: #86efac;
+}
+
+body.dark-mode .upcoming-sessions h4 {
+  color: #94a3b8;
+}
+
+body.dark-mode .session-preview {
+  background: #475569;
+}
+
+body.dark-mode .session-preview.today {
+  background: #1e3a8a;
+}
+
+body.dark-mode .session-day {
+  color: #f1f5f9;
+}
+
+body.dark-mode .session-time {
+  color: #94a3b8;
+}
+
+body.dark-mode .session-subject {
+  color: #60a5fa;
+}
+
+body.dark-mode .no-sessions-msg {
+  color: #94a3b8;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .reminder-manager {
+    padding: 1.5rem;
+  }
+
+  .reminder-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .enable-notifications-btn {
+    padding: 0.625rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .notification-status {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .upcoming-sessions h4 {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .session-preview {
+    padding: 1rem;
+  }
+
+  .session-day {
+    font-size: 0.85rem;
+  }
+
+  .session-time {
+    font-size: 0.8rem;
+  }
+
+  .session-subject {
+    font-size: 0.9rem;
+  }
+}

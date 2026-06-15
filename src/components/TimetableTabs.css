@@ -1,0 +1,70 @@
+/* TimetableTabs - Mobile First */
+.timetable-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #f1f5f9;
+  color: #3b82f6;
+}
+
+.tab-btn.active {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+
+.tab-icon {
+  font-size: 1.1rem;
+}
+
+/* Dark Mode */
+body.dark-mode .timetable-tabs {
+  background: #334155;
+}
+
+body.dark-mode .tab-btn:hover {
+  background: #475569;
+}
+
+body.dark-mode .tab-btn.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .timetable-tabs {
+    gap: 1rem;
+    padding: 0.5rem;
+    max-width: 500px;
+  }
+
+  .tab-btn {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

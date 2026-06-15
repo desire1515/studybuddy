@@ -1,0 +1,297 @@
+/* StudyTimer - Mobile First */
+.study-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.timer-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timer-icon {
+  font-size: 1.5rem;
+}
+
+.timer-time {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  font-family: 'Courier New', monospace;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.timer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.start-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.start-btn:hover {
+  background: #16a34a;
+  transform: scale(1.02);
+}
+
+.stop-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.stop-btn:hover {
+  background: #dc2626;
+  transform: scale(1.02);
+}
+
+.skip-btn {
+  background: #6b7280;
+  color: white;
+}
+
+.skip-btn:hover {
+  background: #4b5563;
+}
+
+.timer-status {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Pomodoro Timer Styles */
+.pomodoro-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.pomodoro-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pomodoro-toggle {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ef4444;
+  background: transparent;
+  color: #ef4444;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pomodoro-toggle.active {
+  background: #ef4444;
+  color: white;
+}
+
+.pomodoro-toggle:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.subject-selector {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subject-selector label {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.subject-selector select {
+  padding: 0.625rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+  color: #1e293b;
+}
+
+.subject-selector select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.pomodoro-display {
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.5rem;
+  border: 3px solid;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.timer-mode-icon {
+  font-size: 2rem;
+}
+
+.timer-mode-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.pomodoro-controls {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pomodoro-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.pomodoro-session,
+.pomodoro-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-count,
+.time-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.session-label,
+.time-label {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.pomodoro-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.pomodoro-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Regular Timer */
+.regular-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* Dark Mode */
+body.dark-mode .study-timer {
+  background: #334155;
+}
+
+body.dark-mode .timer-time {
+  color: #f1f5f9;
+}
+
+body.dark-mode .timer-status {
+  color: #94a3b8;
+}
+
+body.dark-mode .subject-selector select {
+  background: #475569;
+  color: #f1f5f9;
+  border-color: #64748b;
+}
+
+body.dark-mode .pomodoro-stats {
+  background: #475569;
+}
+
+body.dark-mode .session-count,
+body.dark-mode .time-count {
+  color: #f1f5f9;
+}
+
+body.dark-mode .pomodoro-info p {
+  color: #64748b;
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .study-timer {
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .timer-display {
+    gap: 1rem;
+  }
+
+  .timer-icon {
+    font-size: 2rem;
+  }
+
+  .timer-time {
+    font-size: 3rem;
+  }
+
+  .timer-controls {
+    gap: 1rem;
+  }
+
+  .timer-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .timer-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .timer-status {
+    font-size: 0.9rem;
+  }
+}

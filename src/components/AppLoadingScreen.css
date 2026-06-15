@@ -1,0 +1,119 @@
+.app-loading-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(47, 129, 247, 0.14), transparent 32%),
+    radial-gradient(circle at 82% 84%, rgba(16, 185, 129, 0.12), transparent 30%),
+    #f6f8fc;
+}
+
+.app-loading-screen--initial {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.app-loading-card {
+  width: min(92vw, 360px);
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 18px;
+  padding: 20px 18px;
+  box-shadow: 0 16px 42px rgba(21, 32, 64, 0.12);
+}
+
+.app-loading-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-loading-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #0f66e8 0%, #0a4ca8 100%);
+  box-shadow: 0 8px 18px rgba(15, 102, 232, 0.35);
+}
+
+.app-loading-title {
+  margin: 0;
+  color: #122037;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.app-loading-subtitle {
+  margin: 3px 0 0;
+  color: #56647d;
+  font-size: 0.86rem;
+}
+
+.app-loading-progress {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.app-loading-progress span {
+  height: 5px;
+  border-radius: 999px;
+  background: #d6e3f8;
+  animation: app-loading-pulse 1.2s ease-in-out infinite;
+}
+
+.app-loading-progress span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.app-loading-progress span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes app-loading-pulse {
+  0%,
+  100% {
+    transform: scaleX(0.82);
+    opacity: 0.55;
+    background: #d6e3f8;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+    background: #0f66e8;
+  }
+}
+
+body.dark-mode .app-loading-screen {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(96, 165, 250, 0.18), transparent 35%),
+    radial-gradient(circle at 82% 84%, rgba(52, 211, 153, 0.14), transparent 30%),
+    #0f172a;
+}
+
+body.dark-mode .app-loading-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .app-loading-title {
+  color: #e2e8f0;
+}
+
+body.dark-mode .app-loading-subtitle {
+  color: #94a3b8;
+}
+
+body.dark-mode .app-loading-progress span {
+  background: #334155;
+}
